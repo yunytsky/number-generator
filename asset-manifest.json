@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/number-generator/static/css/main.592f04a0.css",
+    "main.js": "/number-generator/static/js/main.3b050fca.js",
+    "index.html": "/number-generator/index.html",
+    "main.592f04a0.css.map": "/number-generator/static/css/main.592f04a0.css.map",
+    "main.3b050fca.js.map": "/number-generator/static/js/main.3b050fca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.592f04a0.css",
+    "static/js/main.3b050fca.js"
+  ]
+}
