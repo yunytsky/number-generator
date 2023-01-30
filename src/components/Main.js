@@ -10,7 +10,6 @@ const Main = () => {
    function generate(e) {
       e.preventDefault();
       if(min > max) {
-         const minNumber = min;
          setMin(max);
          setMax(min);
       }
@@ -47,9 +46,6 @@ const Main = () => {
                   }} />
                </label>
             </div>
-
-            
-
             <button className="main__button" onClick={generate}>Generate</button>
          </form>
          <div className="main__output">{number}</div>
