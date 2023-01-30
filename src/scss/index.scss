@@ -1,0 +1,152 @@
+// Reset
+@import "reset";
+// _______________________________________
+// Fonts
+@import "fonts";
+// _______________________________________
+// Colors
+$white: #FBFBFD;
+$main: #DC802B;
+$main-hover: #d27825;
+$main-active: #e88d38;
+$gray: #F5F5F5;
+$background-light: #F4F5F9;
+$black: #373737;
+$card-light: #ffffff;
+// Animations
+@keyframes error {
+   0%{
+     transform: translateX(-100%); 
+   }
+   100% {
+      transform: none;
+   }
+}
+
+// _______________________________________
+.App{
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+body{
+   overflow: hidden;
+   max-height: 100vh;
+   @include inter-regular;
+   background-color: $background-light;
+}
+// _______________________________________
+.main{
+   background-color: $card-light;
+   border-radius: .5em;
+   margin: 0 auto;
+   min-width: 50vw;
+   max-width: 80vw;
+   overflow: hidden;
+   max-height: 95vh;
+   // box-shadow: rgba(149, 157, 165, 0.025) 0px 8px 24px;
+   box-shadow: rgba(17, 17, 26, 0.02) 0px 1px 0px,
+   rgba(17, 17, 26, 0.02) 0px 0px 8px;
+}
+
+
+.main__header {
+   border-radius: .5em .5em 0 0;
+   background-color: $main;
+   color: $white;
+   padding: 1.5em 1em;
+   letter-spacing: .1em;
+   text-transform: uppercase;
+   width: 100%;
+   display: inline-block;
+   text-align: center;
+   margin-bottom: 3.5em;
+   @include inter-black;
+   font-size: 1.3rem;
+   user-select: none;
+}
+
+.error {
+   position: relative;
+   color: rgba($color: rgb(136, 22, 22), $alpha: .7);
+   font-style: italic;
+   @include inter-light;
+   margin: -2.5em 0 1.5em 0;
+   text-align: center;
+   display: block;
+   animation: error .5s;
+}
+
+form{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   &::after{
+      content: " ";
+      height: 1px;
+      width: 80%;
+      background-color: rgba($color: $black, $alpha: .2);
+      
+   }
+}
+
+.main__inputs{
+   display: flex;
+   text-align: center;
+   justify-content: space-evenly;
+   margin-bottom: 3em;
+   width: 100%;
+   label{
+      display: flex;
+      flex-direction: column;   
+   }
+}
+
+#minimum, #maximum {
+   background-color: #f0f0f0;
+   padding: .8em;
+   width: 10vw;
+   height: 10vw;
+   display: block;
+   text-align: center;
+   margin-top: .5em;
+   font-size: 1.5rem;
+   color: $black;
+   &:focus{
+      border: 3px solid $main;
+   }
+}
+
+#maximum {
+   margin-right: 0;
+}
+
+.main__button {
+   background-color: $main;
+   color: $white;
+   padding: .5em  3em;
+   text-align: center;
+   border-radius: 2em;
+   margin-bottom: 2.5em;
+   letter-spacing: .05em;
+   &:hover{
+      background-color: $main-hover;
+   }
+   &:active{
+      background-color: $main-active;
+   }
+}
+
+.main__output {
+   color: $black;
+   text-align: center;
+   font-size: 2.6rem;
+   margin: 1.5em 0;
+   @include inter-medium;
+}
+
+
+// _______________________________________
+@import "responsive";
